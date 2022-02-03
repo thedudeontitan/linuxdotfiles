@@ -186,7 +186,19 @@ exec_always picom --config $HOME/.config/picom/picom.conf  --experimental-backen
 exec_always autotiling
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
-##########gaps
-for_window[class=.*] border pixel 0
+
+############colors#################
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4C566A #D8DEE9 #3B4252 #2e9ef4   #D8DEE9
+client.focused_inactive #4C566A #5f676a #4C566A #484e50   #4C566A
+client.unfocused        #4C566A #3B4252 #ECEFF4 #292d2e   #4C566A
+client.urgent           #2f343a #900000 #ECEFF4 #900000   #900000
+client.placeholder      #000000 #0c0c0c #ECEFF4 #000000   #0c0c0c
+
+client.background       #ffffff
+
+############gaps################
+for_window[class=.*] border pixel 3
 gaps inner 10
 gaps outer 0
