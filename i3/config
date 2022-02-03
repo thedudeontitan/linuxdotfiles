@@ -182,7 +182,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always picom --config $HOME/.config/picom/picom.conf  --experimental-backends --backend glx
+exec_always picom --config $HOME/.config/picom/picom.conf  
 exec_always autotiling
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
