@@ -104,15 +104,15 @@ window:
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     #Font fmaily
     #
     #Default
     #  -(macOS) Menlo
     #  -(Linux/BSD) monospaces
     #  -(Windows) Consolas
-    #family:Caskaydia Cove Nerd Font
-    #style:Book
+    family: JetBrains Mono
+    #style:Regular
 
   # Bold font face
   #bold:

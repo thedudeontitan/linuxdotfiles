@@ -64,13 +64,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;1
-font-2 = siji:pixelsize=10;1
-font-3 = FreeSans:pixelsize=10;1
-font-4 = Material Icons:size=10;1
-font-5 = Symbols Nerd Font:size=10;1
-font-6 = Noto Sans Symbols2:size=10;1
-font-7 = CaskaydiaCove Nerd Font:size=10;1
+font-1 = siji:pixelsize=10;1
+font-2 = Material Icons:size=10;1
+font-3 = Symbols Nerd Font:size=10;1
+font-4 = Noto Sans Symbols2:size=10;1
+font-5 = CaskaydiaCove Nerd Font:size=10;1
 
 modules-left = i3
 modules-center = date
@@ -259,7 +257,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp3s0
+interface = eth0
 interval = 5.0
 
 format-connected-underline =
@@ -323,7 +321,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume =  墳 %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix =
+format-muted-prefix = 婢
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = 🔇
 
