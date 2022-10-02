@@ -55,7 +55,8 @@ bindsym $mod+m exec firefox
 bindsym $mod+n exec firefox -private
 #shortcut for chromium
 bindsym $mod+c exec chromium
-
+#shortcit for pcmanfm
+bindsym $mod+b exec pcmanfm
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
