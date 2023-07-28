@@ -111,7 +111,7 @@ font:
     #  -(macOS) Menlo
     #  -(Linux/BSD) monospaces
     #  -(Windows) Consolas
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font Mono
     #style:Regular
 
   # Bold font face
@@ -223,7 +223,7 @@ colors:
     #  foreground: '#ffffff'
     #  background: '#000000'
 
-    bar:
+    colors.footer_bar:
       background: '#434c5e'
       foreground: '#d8d889'
 
