@@ -185,7 +185,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
+bindsym Print exec flameshot full
+bindsym Shift+Print exec flameshot gui
+exec --no-startup-id /usr/bin/lxqt-policykit-agent
 exec_always picom --config $HOME/.config/picom/picom.conf  
 exec_always autotiling
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
