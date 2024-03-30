@@ -192,6 +192,7 @@ exec_always picom --config $HOME/.config/picom/picom.conf
 exec_always autotiling
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id ~/.screenlayout/screenlayout.sh
 
 ############colors#################
 
