@@ -68,13 +68,13 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=15;1
 font-1 = siji:pixelsize=10;1
 font-2 = Material Icons:size=10;1
-font-3 = Symbols Nerd Font:size=20;1
+font-3 = Symbols Nerd Font:size=18;2
 font-4 = Noto Sans Symbols2:size=20;1
-font-5 = CaskaydiaCove Nerd Font:size=20;1
+font-5 = CaskaydiaCove Nerd Font:size=18;2
 
 modules-left = i3
 modules-center = date spotify spotify-play-pause spotify-prev spotify-next
-modules-right = backlight-acpi alsa cpu eth battery wlan
+modules-right = backlight-acpi pulseaudio cpu eth battery wlan bluetooth
 
 tray-position = right
 tray-padding = 2
@@ -249,7 +249,7 @@ interval = 2
 format-prefix = "﬙ "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline =
-label =  %percentage:2%%
+label =    %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -311,10 +311,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  墳" " %percentage%%
+label-volume =  墳   %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇
+label-muted = 󰝟
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -333,6 +333,15 @@ bar-volume-fill-font = 2
 bar-volume-empty =
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth.sh
+interval = 2
+click-left = exec blueberry
+click-right = exec ~/.config/polybar/scripts/toggle_bluetooth.sh
+format-padding = 1
+format-foreground = #ffffff
 
 [module/alsa]
 type = internal/alsa
@@ -427,14 +436,14 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging>     <label-charging>
+format-charging = <animation-charging> <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity>     <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 
 ; Available tags:
 ;   <label-full> (default)
